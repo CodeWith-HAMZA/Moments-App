@@ -17,7 +17,6 @@ function App() {
   // const [messageApi, contextHolder] = message.useMessage();
   const { quill, quillRef } = useQuill();
 
-   
   useEffect(() => {
     if (quill) {
       quill.on("text-change", () => {
@@ -55,19 +54,12 @@ function App() {
   }, []);
 
   return (
-    <>  
+    <>
       <Routes>
         <Route index element={<Home />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
-        <Route
-          path="*"
-          element={
-            <>
-              <Notfound />
-            </>
-          }
-        />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </>
   );
