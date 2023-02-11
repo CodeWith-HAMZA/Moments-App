@@ -51,19 +51,7 @@ function App() {
   }, []);
 
   return (
-    <>
-      {/* <button
-        onClick={() => {
-          context?.messageApi.open({
-            type: "success",
-            content: "This is a warning message",
-          });
-        }}
-      >
-        Hey
-      </button> */}
-      {/* Hey there this */}
-      {/* {contextHolder} */}
+    <>  
       <Routes>
         <Route index element={<Home />} />
         <Route path="/signin" element={<Signin />} />
