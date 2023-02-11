@@ -16,6 +16,8 @@ function App() {
   const context = useContext(Context);
   // const [messageApi, contextHolder] = message.useMessage();
   const { quill, quillRef } = useQuill();
+
+   
   useEffect(() => {
     if (quill) {
       quill.on("text-change", () => {
@@ -23,6 +25,8 @@ function App() {
       });
     }
   }, [quill]);
+
+  // * On Component, Check If The User Exist Or Not?
   useEffect(() => {
     // * Getting AuthToken From LC That's Being Saved After Login or signup
     const token = localStorage.getItem("authToken");
